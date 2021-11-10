@@ -1,0 +1,10 @@
+
+#navHeader {
+    width: 100%;
+    background-color: white;
+}
+
+#mainBox {
+    background-image: url(/img/welcome.jpeg);
+    height: 1365px;
+}
