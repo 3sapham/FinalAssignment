@@ -35,21 +35,19 @@ header {
 #titleBox {
     box-sizing: border-box;
     vertical-align: middle;
-    padding: 3rem 0;
+    padding: 4rem 0;
+    line-height: 1.2;
 }
 
-#navHeader > nav {
+nav {
     box-sizing: border-box;
     text-align: center;
-    line-height: 3rem;
 }
 
-#titleBox > a > h1, #navHeader > nav > ul {
-    vertical-align: middle;
-}
-
-#navHeader > nav > ul > li {
+li {
     list-style: none;
+    margin-bottom: 1.5rem;
+    font-size: larger;
 }
 
 a.topNav {
@@ -67,7 +65,7 @@ a.topNav:link, #titleBox > a:link {
 }
 
 a.topNav:hover {
-    color: coral;
+    color: pink;
 }
 
 a.topNav:active {
@@ -138,28 +136,6 @@ span > h2 {
 
 #welcome > h1 {
     font-size: 4rem;
-}
-
-nav {
-    flex: 40%;
-    display: inline-block;
-    box-sizing: border-box;
-    margin: auto;
-    font-size: x-large;
-    box-sizing: border-box;
-}
-
-#mainBox > nav > ul > li {
-    list-style: none;
-}
-
-#mainBox > nav > ul > li > a:link {
-    text-decoration: none;
-    color: white;
-}
-
-#mainBox > nav > ul > li > a:hover {
-    color: lightgreen;
 }
 
 /* REFLEKSJON */
