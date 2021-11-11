@@ -1,38 +1,59 @@
+html {
+    scroll-behavior: smooth;
+  }
+
 body {
     margin: 0;
     font-size: 1.2rem;
     line-height: 1.5;
-    font-family: Helvetica, sans-serif, sans-serif;
+    font-family: serif;
     font-weight: 300;
-    background-color:honeydew;
+    background-color:black;
+    color:lightgreen;
+    text-shadow: 2px 2px purple;
+    font-family: Fixed, monospace;
 }
 
 header {
-    width: 100%;
-    padding: 0rem 2rem;
-    box-sizing: border-box;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+    border-right: 0.1px solid darkgrey;
 }
 
 #navHeader {
     width: 100%;
-    display: flex;
-    box-sizing: border-box;
     vertical-align: middle;
+    text-align: center;
 }
 
 #titleBox {
-    flex: 20%;
     box-sizing: border-box;
     vertical-align: middle;
+    padding: 3rem 0;
 }
+
 #navHeader > nav {
-    flex: 40%;
     box-sizing: border-box;
+    text-align: center;
+    line-height: 3rem;
+}
+
+#titleBox > a > h1, #navHeader > nav > ul {
+    vertical-align: middle;
 }
 
 #navHeader > nav > ul > li {
     list-style: none;
-    display: inline;
+}
+
+a.topNav {
+    display: block;
 }
 
 a:visited {
@@ -41,28 +62,57 @@ a:visited {
 
 a.topNav:link, #titleBox > a:link {
     text-decoration: none;
-    color: black;
+    color: white;
     margin-right: 20px;
 }
 
 a.topNav:hover {
-    color: lightgreen;
+    color: coral;
 }
 
-a.topNav:active, #titleBox > a:active {
+a.topNav:active {
     color: yellow;
 } 
 
 main {
     width: 100%;
     box-sizing: border-box;
+    position: relative;
 }
+
+
+footer {
+    width: 80%;
+    display: flex;
+    flex-flow: row;
+    height: 20vh;
+    margin-left: 20%;
+    padding-top: 4rem;
+    border-top: 0.1px solid darkgrey;
+
+}
+
+footer > span {
+    flex: 25%;
+    margin: auto;
+    padding: 2rem;
+    font-size: 13px;
+    text-align: center;
+
+}
+
+span > h2 {
+    margin-block-start: 0;
+}
+
+
+/* INDEX */
 
 #mainBox {
     width: 100%;
     margin: auto;
-    height: 90vh;
-    background-image: url(/img/welcome2.jpeg);
+    height: 100vh;
+    background-image: url(/img/welcome.jpeg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -70,10 +120,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     margin: 0;
-    color: white;
-    text-shadow: 1px 1px lime;
     box-sizing: border-box;
-    padding: 8rem;
 
 }
 
@@ -84,6 +131,8 @@ main {
     margin: auto;
     padding: 2rem;
     box-sizing: border-box;
+    margin-left: 20%;
+    text-align: center;
 
 }
 
@@ -113,21 +162,42 @@ nav {
     color: lightgreen;
 }
 
-footer {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    height: 20vh;
-    margin-bottom: 2rem;
-}
-
-footer > span {
-    flex: 20%;
-    margin: auto;
-    padding: 2rem;
-}
+/* REFLEKSJON */
 
 article {
     width: 70vw;
     margin: auto;
+    margin-left: 25%;
+    margin-bottom: 4rem;
+    box-sizing: border-box;
+    padding: 2rem;
+}
+
+.coverPage > h1 {
+    font-size: 6rem;
+    margin: 0;
+    padding: 2rem;
+    margin-left: 25%;
+}
+
+.coverPage {
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items:flex-end;
+    display: flex;
+} 
+
+#refleksjonimg {
+    background-image: url(/img/refleksjon.jpeg);
+}
+
+#accessimg {
+    background-image: url(/img/access.jpeg);
+}
+
+#topicalimg {
+    background-image: url(/img/topical.jpeg);
 }
