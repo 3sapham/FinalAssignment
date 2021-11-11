@@ -10,7 +10,7 @@ body {
     font-weight: 300;
     background-color:black;
     color:white;
-    text-shadow: 2px 2px purple;
+    text-shadow: 2px 2px blue;
     font-family: Fixed, monospace;
 }
 
@@ -72,6 +72,10 @@ li.selected a {
     color: pink; 
 } 
 
+p > a {
+    color: pink;
+}
+
 main {
     width: 100%;
     box-sizing: border-box;
@@ -95,7 +99,7 @@ footer > span {
     flex: 25%;
     margin: auto;
     padding: 2rem;
-    font-size: 13px;
+    font-size: 1rem;
     text-align: center;
 
 }
@@ -107,6 +111,12 @@ span > h2 {
 p {
     max-width: 70ch;
 }
+
+h1 {
+    text-shadow: 4px 4px blue;
+}
+
+/* velkommen */
 
 #mainBox {
     width: 100%;
@@ -131,7 +141,7 @@ p {
 }
 
 #welcome > h1 {
-    font-size: 4rem;
+    font-size: 5rem;
 }
 
 /* pages */
@@ -139,9 +149,7 @@ p {
 .coverPage > h1 {
     font-size: 6rem;
     margin: 0;
-    padding: 2rem;
-    margin-left: 25%;
-    padding: 2rem;
+    padding: 6rem;
     margin-left: 20%;
 }
 
@@ -153,6 +161,7 @@ p {
     background-repeat: no-repeat;
     align-items:flex-end;
     display: flex;
+    margin-bottom: 4rem;
 } 
 
 #refleksjonimg {
