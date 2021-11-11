@@ -28,30 +28,30 @@ header {
 
 #navHeader {
     width: 100%;
-    vertical-align: middle;
-    text-align: center;
 }
 
 #titleBox {
     box-sizing: border-box;
     vertical-align: middle;
-    padding: 4rem 0;
+    padding: 6rem 2rem;
     line-height: 1.2;
+    text-align: center;
+    font-size: 2rem;
 }
 
 nav {
     box-sizing: border-box;
     text-align: center;
+    padding: 0 2rem;
+}
+
+ul {
+    padding-inline-start: 0px;
 }
 
 li {
     list-style: none;
     margin-bottom: 1.5rem;
-    font-size: larger;
-}
-
-a.topNav {
-    display: block;
 }
 
 a:visited {
@@ -61,15 +61,14 @@ a:visited {
 a.topNav:link, #titleBox > a:link {
     text-decoration: none;
     color: white;
-    margin-right: 20px;
 }
 
 a.topNav:hover {
     color: pink;
 }
 
-a.topNav:active {
-    color: yellow;
+li.selected a { 
+    color: pink; 
 } 
 
 main {
@@ -86,6 +85,7 @@ footer {
     height: 20vh;
     margin-left: 20%;
     padding-top: 4rem;
+    margin-top: 4rem;
     border-top: 0.1px solid darkgrey;
 
 }
@@ -103,8 +103,9 @@ span > h2 {
     margin-block-start: 0;
 }
 
-
-/* INDEX */
+p {
+    max-width: 70ch;
+}
 
 #mainBox {
     width: 100%;
@@ -116,19 +117,13 @@ span > h2 {
     background-repeat: no-repeat;
     background-color: black;
     display: flex;
-    flex-wrap: wrap;
     margin: 0;
-    box-sizing: border-box;
 
 }
 
 #welcome {
-    flex: 50%;
-    display: inline-block;
-    box-sizing: border-box;
     margin: auto;
     padding: 2rem;
-    box-sizing: border-box;
     margin-left: 20%;
     text-align: center;
 
@@ -138,22 +133,15 @@ span > h2 {
     font-size: 4rem;
 }
 
-/* REFLEKSJON */
-
-article {
-    width: 70vw;
-    margin: auto;
-    margin-left: 25%;
-    margin-bottom: 4rem;
-    box-sizing: border-box;
-    padding: 2rem;
-}
+/* pages */
 
 .coverPage > h1 {
     font-size: 6rem;
     margin: 0;
     padding: 2rem;
     margin-left: 25%;
+    padding: 2rem;
+    margin-left: 20%;
 }
 
 .coverPage {
@@ -176,4 +164,15 @@ article {
 
 #topicalimg {
     background-image: url(/img/topical.jpeg);
+}
+
+#funimg {
+    background-image: url(/img/fun.gif);
+}
+
+article {
+    width: 70vw;
+    margin-left: 25%;
+    box-sizing: border-box;
+    padding: 2rem;
 }
