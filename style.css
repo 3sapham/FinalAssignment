@@ -15,37 +15,61 @@ body {
 }
 
 header {
-    width: 20%;
+    width: 10%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: fixed;
-    z-index: 1;
+    z-index: 99;
     overflow-x: hidden;
-    border-right: 0.1px solid darkgrey;
-}
-
-#navHeader {
-    width: 100%;
     font-family: 'Gilroy', 'Noto Sans KR', sans-serif;
     font-weight:bolder;
     line-height: 1.5;
     text-transform: uppercase;
+    text-align: center;
+}
 
+#menu{
+    margin: auto;
+    text-align: center;
+    flex: 1;
+    cursor: pointer;
+    font-size: 2.5rem;
+    box-sizing: border-box;
+    align-self: flex-end;
+    padding-top: 6rem;
 }
 
 #titleBox {
     box-sizing: border-box;
-    padding: 6rem 2rem;
     text-align: center;
     font-size: 2rem;
+    flex: 3;
+    margin: auto;
+    padding-top: 5rem;
+}
+
+#titleBox a {
+    writing-mode: vertical-rl; 
+    transform: rotate(180deg);
 }
 
 nav {
-    box-sizing: border-box;
+    height: 100%;
+    width: 0;
+    font-size: 2rem;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+    padding-left: 10%;
     text-align: center;
-    padding: 0 2rem;
+    padding-top: 15%;
+    transition: 0.3s ease-in;
+    font-family: 'Gilroy', 'Noto Sans KR', sans-serif;
+    font-weight:bolder;
+    line-height: 1.5;
+    text-transform: uppercase;
 }
 
 ul {
@@ -66,7 +90,7 @@ a.topNav:link, #titleBox > a:link {
     color: white;
 }
 
-a.topNav:hover {
+a.topNav:hover, #navHeader span:hover {
     color: pink;
 }
 
@@ -84,17 +108,19 @@ main {
     position: relative;
 }
 
+main > * {
+    margin-left: 10%;
+} 
+
 
 footer {
     width: 80%;
     display: flex;
     flex-flow: row;
     height: 20vh;
-    margin-left: 20%;
     padding-top: 4rem;
     margin-top: 4rem;
-    border-top: 0.1px solid darkgrey;
-
+    margin: auto;
 }
 
 footer > span {
@@ -120,10 +146,12 @@ h1 {
 }
 
 /* velkommen */
+#main {
+    transition: ease-in-out 0.5s;
+}
 
 #mainBox {
     width: 100%;
-    margin: auto;
     height: 100vh;
     background-image: url(/img/welcome.jpeg);
     background-position: center;
@@ -132,13 +160,11 @@ h1 {
     background-color: black;
     display: flex;
     margin: 0;
-
 }
 
 #welcome {
     margin: auto;
     padding: 4rem;
-    margin-left: 20%;
     text-align: center;
 
 }
@@ -153,7 +179,6 @@ h1 {
     font-size: 6rem;
     margin: 0;
     padding: 6rem;
-    margin-left: 20%;
 }
 
 .coverPage {
@@ -186,7 +211,19 @@ h1 {
 
 article {
     width: 70vw;
-    margin-left: 25%;
     box-sizing: border-box;
     padding: 2rem;
+    margin: auto;
+}
+
+@media screen and (max-width: 600px) {
+    
+}
+
+@media screen and (min-width: 600px) and (max-width: 960px) { 
+
+}
+
+@media screen and (min-width: 960px) {
+    
 }
