@@ -1,6 +1,6 @@
 function openNav() {
-    document.getElementById("sidenav").style.width = "30%";
-    document.getElementById("main").style.marginLeft = "40%";
+    document.getElementById("sidenav").style.width = "40%";
+    document.getElementById("main").style.marginLeft = "50%";
   }
   
   function closeNav() {

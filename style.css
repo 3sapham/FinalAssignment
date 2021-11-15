@@ -2,83 +2,81 @@ html {
     scroll-behavior: smooth;
   }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-size: 1.2rem;
-    line-height: 1.65;
-    font-family: serif;
-    font-weight: 400;
-    background-color:black;
-    color:white;
-    text-shadow: 2px 2px blue;
-    font-family: 'Raleway', 'Poppins', 'Noto Sans KR', sans-serif;;
+    background-color:white;
+    color:black;
+    font-weight: 700;
+    font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+    line-height: 1.5;
 }
 
 header {
     width: 10%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: fixed;
     z-index: 99;
     overflow-x: hidden;
-    font-family: 'Gilroy', 'Noto Sans KR', sans-serif;
-    font-weight:bolder;
-    line-height: 1.5;
     text-transform: uppercase;
     text-align: center;
 }
 
-#menu{
-    margin: auto;
-    text-align: center;
-    flex: 1;
-    cursor: pointer;
-    font-size: 2.5rem;
-    box-sizing: border-box;
-    align-self: flex-end;
-    padding-top: 6rem;
-}
-
 #titleBox {
-    box-sizing: border-box;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     flex: 3;
     margin: auto;
     padding-top: 5rem;
-}
-
-#titleBox a {
     writing-mode: vertical-rl; 
     transform: rotate(180deg);
 }
 
+#menu{
+    margin: auto;
+    flex: 1;
+    cursor: pointer;
+    padding-top: 6rem;
+    font-size: 2.5rem;
+}
+
+#welcomeHeader {
+    color:white;
+    text-shadow: 2px 2px 2px black;
+}
+
 nav {
-    height: 100%;
+    height: 100vh;
     width: 0;
-    font-size: 2rem;
+    font-size: 1.5rem;
     position: fixed;
     z-index: 1;
     overflow-x: hidden;
-    padding-left: 10%;
     text-align: center;
-    padding-top: 15%;
     transition: 0.3s ease-in;
-    font-family: 'Gilroy', 'Noto Sans KR', sans-serif;
-    font-weight:bolder;
-    line-height: 1.5;
+    line-height: 0.9;
     text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+    background-color: white;
 }
 
 ul {
     padding-inline-start: 0px;
+    margin: auto;
+    list-style: none;
 }
 
-li {
-    list-style: none;
-    margin-bottom: 1.5rem;
+nav li {
+    margin-bottom: 3rem;
 }
 
 a:visited {
@@ -90,68 +88,20 @@ a.topNav:link, #titleBox > a:link {
     color: white;
 }
 
-a.topNav:hover, #navHeader span:hover {
+a.topNav:hover, menu:hover, li.selected a, a {
     color: pink;
-}
-
-li.selected a { 
-    color: pink; 
-} 
-
-a {
-    color: pink;
-}
-
-main {
-    width: 100%;
-    box-sizing: border-box;
-    position: relative;
 }
 
 main > * {
     margin-left: 10%;
 } 
 
-
-footer {
-    width: 80%;
-    display: flex;
-    flex-flow: row;
-    height: 20vh;
-    padding-top: 4rem;
-    margin-top: 4rem;
-    margin: auto;
-}
-
-footer > span {
-    flex: 25%;
-    margin: auto;
-    padding: 2rem;
-    font-size: 1rem;
-    text-align: center;
-
-}
-
-span > h2 {
-    margin-block-start: 0;
-}
-
-p {
-    max-width: 70ch;
-    text-shadow: 0px 0px;
-}
-
-h1 {
-    text-shadow: 4px 4px blue;
-}
-
-/* velkommen */
 #main {
     transition: ease-in-out 0.5s;
 }
 
 #mainBox {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-image: url(/img/welcome.jpeg);
     background-position: center;
@@ -166,23 +116,21 @@ h1 {
     margin: auto;
     padding: 4rem;
     text-align: center;
-
+    text-transform: uppercase;
+    width: 65%;
 }
 
 #welcome > h1 {
-    font-size: 5rem;
+    font-size: 3rem;
 }
 
-/* pages */
-
 .coverPage > h1 {
-    font-size: 6rem;
+    font-size: 3rem;
     margin: 0;
-    padding: 6rem;
+    padding: 3rem;
 }
 
 .coverPage {
-    width: 100%;
     height: 100vh;
     background-position: center;
     background-size: cover;
@@ -209,6 +157,20 @@ h1 {
     background-image: url(/img/fun.gif);
 }
 
+div p {
+    max-width: 70ch;
+    margin: auto;
+}
+
+h1 {
+    line-height: 0.9;
+    text-align: left;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 4px 4px black;
+}
+
+
 article {
     width: 70vw;
     box-sizing: border-box;
@@ -216,14 +178,84 @@ article {
     margin: auto;
 }
 
+footer {
+    width: 80%;
+    display: flex;
+    flex-flow: column;
+    padding: 2rem 0;
+    margin: auto;
+}
+
+footer > span {
+    flex: 1;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
 @media screen and (max-width: 600px) {
     
 }
 
 @media screen and (min-width: 600px) and (max-width: 960px) { 
+    nav {
+        font-size: 2rem;
+    }
 
+    footer {
+        flex-flow: row;
+    }
+
+    footer > span {
+        margin: 4rem 0;
+    }
+
+    div p {
+        max-width: 60ch;
+    }
+
+    #main {
+        transition: ease-in-out 0.5s;
+    }
+
+    #welcome > h1 {
+        font-size: 5rem;
+    }
+
+    .coverPage > h1 {
+        font-size: 5rem;
+        margin: 0;
+        padding: 3rem;
+    }
 }
 
 @media screen and (min-width: 960px) {
+    body {
+        font-size: 1.2rem;
+    }
+
+    nav {
+        font-size: 2rem;
+    }
+        
+    #titleBox {
+        font-size: 2rem;
+    }
     
+    div p {
+        max-width: 70ch;
+    }
+
+    footer {
+        flex-flow: row;
+    }
+    
+    #welcome > h1 {
+        font-size: 6rem;
+    }
+    
+    .coverPage > h1 {
+        font-size: 6rem;
+        padding: 6rem;
+    }
 }
