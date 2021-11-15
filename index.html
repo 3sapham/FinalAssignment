@@ -15,9 +15,12 @@
     <div id="titleBox">
         <a href="index.html">Final Assignment</a>
     </div>
-    <span id="menu" onclick="openNav()">&#9776;</span>
+    <span id="menu" onclick="openNav()">
+        <a href="javascript:void(0)">&#9776;</a>
+    </span>
 </header>
 <nav id="sidenav">
+    <a href="#" id="close" onclick="closeNav()">&times;</a>
     <ul>
         <li><a class="topNav" href="pages/refleksjon.html">Refleksjon</a></li>
         <li><a class="topNav" href="pages/accessibility.html">Accessibility</a></li>
@@ -26,10 +29,16 @@
     </ul>
 </nav>
 
-<main id="main">
-    <div id="mainBox"  onclick="closeNav()">
-        <div id="welcome">
+<main id="main"  onclick="closeNav()">
+    <div id="mainBox">
+        <div id="welcome" class="coverimg">
             <h1>Being a first-year student at OsloMet.</h1>
+        </div>
+        <div id="stripe">
+            <p>Being a first-year student at OsloMet.</p>
+        </div>
+        <div id="welcome3" class="coverimg">
+            <h2>Being a first-year student at OsloMet.</h2>
         </div>
     </div>
 </main>

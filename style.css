@@ -4,6 +4,7 @@ html {
 
 * {
     box-sizing: border-box;
+    margin: auto;
 }
 
 body {
@@ -17,7 +18,7 @@ body {
 }
 
 header {
-    width: 10%;
+    width: 10vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -33,23 +34,21 @@ header {
     text-align: center;
     font-size: 1.5rem;
     flex: 3;
-    margin: auto;
     padding-top: 5rem;
     writing-mode: vertical-rl; 
     transform: rotate(180deg);
 }
 
 #menu{
-    margin: auto;
     flex: 1;
     cursor: pointer;
     padding-top: 6rem;
     font-size: 2.5rem;
 }
 
-#welcomeHeader {
+#welcomeHeader, #welcomeHeader > #menu a{
     color:white;
-    text-shadow: 2px 2px 2px black;
+    text-shadow: 2px 2px 5px black;
 }
 
 nav {
@@ -60,7 +59,7 @@ nav {
     z-index: 1;
     overflow-x: hidden;
     text-align: center;
-    transition: 0.3s ease-in;
+    transition: ease-in-out 0.5s;
     line-height: 0.9;
     text-transform: uppercase;
     display: flex;
@@ -71,7 +70,6 @@ nav {
 
 ul {
     padding-inline-start: 0px;
-    margin: auto;
     list-style: none;
 }
 
@@ -83,16 +81,24 @@ a:visited {
     color: inherit;
 }
 
-a.topNav:link, #titleBox > a:link {
+a.topNav:link, #titleBox > a:link, #menu a:link, #close {
     text-decoration: none;
-    color: white;
+    color: black;
+
 }
 
-a.topNav:hover, menu:hover, li.selected a, a {
+a:hover, li.selected a, a, #menu a:hover {
     color: pink;
 }
 
-main > * {
+#close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 2rem;
+}
+
+main > *, h2, h3 {
     margin-left: 10%;
 } 
 
@@ -101,33 +107,63 @@ main > * {
 }
 
 #mainBox {
-    width: 100vw;
-    height: 100vh;
-    background-image: url(/img/welcome.jpeg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     background-color: black;
-    display: flex;
     margin: 0;
 }
 
+.coverimg {
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: black;
+    display: flex;
+}
+
 #welcome {
+    background-image: url(/img/welcome.jpeg);
+
+}
+ #welcome3 {
+    background-image: url(/img/welcome2.jpeg);
+}
+
+#stripe {
+    width: 100vw;
+    height: 70vh;
+    background-color: black;
+    color: white;
+    display: flex;
+}
+
+#mainBox div > * {
     margin: auto;
+    color: white;
+    font-size: 3rem;
     padding: 4rem;
     text-align: center;
     text-transform: uppercase;
     width: 65%;
 }
 
-#welcome > h1 {
-    font-size: 3rem;
+#stripe p {
+    font-size: 2rem;
+}
+
+h1, .coverimg h2 {
+    line-height: 0.9;
+    text-align: left;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 4px 4px black;
 }
 
 .coverPage > h1 {
     font-size: 3rem;
     margin: 0;
-    padding: 3rem;
+    padding: 4rem;
 }
 
 .coverPage {
@@ -157,33 +193,60 @@ main > * {
     background-image: url(/img/fun.gif);
 }
 
-div p {
-    max-width: 70ch;
-    margin: auto;
-}
-
-h1 {
-    line-height: 0.9;
-    text-align: left;
-    text-transform: uppercase;
-    color: white;
-    text-shadow: 4px 4px black;
-}
-
-
 article {
-    width: 70vw;
-    box-sizing: border-box;
-    padding: 2rem;
     margin: auto;
+}
+
+article div p, .refrences {
+    max-width: 50ch;
+    padding: 2rem;
+}
+
+h2, h3 {
+    text-transform: uppercase;
+}
+
+.refrences {
+    padding-bottom: 0;
+    font-style: italic;
+}
+
+article div {
+    width: 90vw;
+    margin-right: 0;
+}
+
+#ref2 {
+    width: 90vw;
+    height: auto;
+}
+
+#gallery {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 0;
+    flex-wrap: wrap;
+    background-color: pink;
+}
+
+.galleri {
+    flex: 1;
+    padding-left: 10%;
+    padding-top: 10%;
+    width: 100%;
+}
+
+.galleri:last-child {
+    padding-bottom: 10%;
 }
 
 footer {
     width: 80%;
     display: flex;
     flex-flow: column;
-    padding: 2rem 0;
-    margin: auto;
+    padding: 4rem;
 }
 
 footer > span {
@@ -193,11 +256,7 @@ footer > span {
     margin: 0.5rem 0;
 }
 
-@media screen and (max-width: 600px) {
-    
-}
-
-@media screen and (min-width: 600px) and (max-width: 960px) { 
+@media screen and (min-width: 600px) { 
     nav {
         font-size: 2rem;
     }
@@ -210,12 +269,8 @@ footer > span {
         margin: 4rem 0;
     }
 
-    div p {
+    article div p, .refrences {
         max-width: 60ch;
-    }
-
-    #main {
-        transition: ease-in-out 0.5s;
     }
 
     #welcome > h1 {
@@ -223,31 +278,35 @@ footer > span {
     }
 
     .coverPage > h1 {
-        font-size: 5rem;
-        margin: 0;
-        padding: 3rem;
+        font-size: 4rem;
+        padding: 4rem;
+    }
+
+    #gallery {
+        flex-direction: row;
+    }
+    
+    .galleri {
+        width: 40%;
+    }
+
+    .galleri {
+        padding-left: 5%;
+        padding-top: 5%;
+    }
+
+    .galleri:last-child, .galleri:nth-last-child(2) {
+        padding-bottom: 5%;
     }
 }
 
 @media screen and (min-width: 960px) {
-    body {
-        font-size: 1.2rem;
+   #titleBox {
+        font-size: 2rem;
     }
 
-    nav {
-        font-size: 2rem;
-    }
-        
-    #titleBox {
-        font-size: 2rem;
-    }
-    
-    div p {
+    article div p, .refrences {
         max-width: 70ch;
-    }
-
-    footer {
-        flex-flow: row;
     }
     
     #welcome > h1 {
