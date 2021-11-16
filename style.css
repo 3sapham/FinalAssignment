@@ -34,14 +34,12 @@ header {
     text-align: center;
     font-size: 1.5rem;
     flex: 3;
-    padding-top: 5rem;
     writing-mode: vertical-rl; 
     transform: rotate(180deg);
 }
 
 #menu{
     flex: 1;
-    cursor: pointer;
     padding-top: 6rem;
     font-size: 2.5rem;
 }
@@ -106,6 +104,8 @@ main > *, h2, h3 {
     transition: ease-in-out 0.5s;
 }
 
+/* INDEX */
+
 #mainBox {
     background-color: black;
     margin: 0;
@@ -126,7 +126,8 @@ main > *, h2, h3 {
     background-image: url(/img/welcome.jpeg);
 
 }
- #welcome3 {
+
+#welcome3 {
     background-image: url(/img/welcome2.jpeg);
 }
 
@@ -134,48 +135,52 @@ main > *, h2, h3 {
     width: 100vw;
     height: 70vh;
     background-color: black;
-    color: white;
     display: flex;
 }
 
 #mainBox div > * {
     margin: auto;
-    color: white;
-    font-size: 3rem;
-    padding: 4rem;
-    text-align: center;
     text-transform: uppercase;
+    font-size: 3rem;
     width: 65%;
+    text-align: center;
+}
+
+#welcome > h1 {
+    font-size: 4rem;
+    text-align: left;
 }
 
 #stripe p {
     font-size: 2rem;
 }
 
-h1, .coverimg h2 {
+h1, .coverimg h2, #stripe p {
     line-height: 0.9;
-    text-align: left;
     text-transform: uppercase;
     color: white;
     text-shadow: 4px 4px black;
 }
 
-.coverPage > h1 {
-    font-size: 3rem;
-    margin: 0;
-    padding: 4rem;
-}
+/* PAGES */
 
 .coverPage {
     height: 100vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    align-items:flex-end;
+    align-items: flex-end;
     display: flex;
     margin-bottom: 4rem;
-    
 } 
+
+.coverPage > h1 {
+    font-size: 3rem;
+    margin: 0;
+    text-align: left;
+    padding: 4rem;
+    overflow: scroll;
+}
 
 #refleksjonimg {
     background-image: url(/img/refleksjon.jpeg);
@@ -193,22 +198,22 @@ h1, .coverimg h2 {
     background-image: url(/img/fun.gif);
 }
 
-article {
-    margin: auto;
-}
-
 article div p, .refrences {
     max-width: 50ch;
-    padding: 2rem;
+    padding: 1rem 2rem;
+}
+
+.refrences {
+    padding-bottom: 0;
+    font-style: italic;
 }
 
 h2, h3 {
     text-transform: uppercase;
 }
 
-.refrences {
-    padding-bottom: 0;
-    font-style: italic;
+article div p:last-child {
+    margin-bottom: 4rem;
 }
 
 article div {
@@ -218,7 +223,6 @@ article div {
 
 #ref2 {
     width: 90vw;
-    height: auto;
 }
 
 #gallery {
@@ -226,7 +230,6 @@ article div {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-left: 0;
     flex-wrap: wrap;
     background-color: pink;
 }
@@ -240,6 +243,10 @@ article div {
 
 .galleri:last-child {
     padding-bottom: 10%;
+}
+
+#ref2, #gallery {
+    margin: 2rem 0;
 }
 
 footer {
