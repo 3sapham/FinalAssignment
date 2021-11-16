@@ -182,8 +182,8 @@ h1, .coverimg h2, #stripe p {
     overflow: scroll;
 }
 
-#refleksjonimg {
-    background-image: url(/img/refleksjon.jpeg);
+#reflectimg {
+    background-image: url(/img/reflection.jpeg);
 }
 
 #accessimg {
@@ -205,11 +205,12 @@ article div p, .refrences {
 
 .refrences {
     padding-bottom: 0;
-    font-style: italic;
 }
 
 h2, h3 {
     text-transform: uppercase;
+    padding: 1rem 0rem;
+    margin-left: 4rem;
 }
 
 article div p:last-child {
@@ -246,7 +247,7 @@ article div {
 }
 
 #ref2, #gallery {
-    margin: 2rem 0;
+    margin: 4rem 0;
 }
 
 footer {
@@ -323,5 +324,9 @@ footer > span {
     .coverPage > h1 {
         font-size: 6rem;
         padding: 6rem;
+    }
+
+    h2, h3 {
+        margin-left: 6rem;
     }
 }
