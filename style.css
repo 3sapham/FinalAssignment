@@ -38,15 +38,30 @@ header {
     transform: rotate(180deg);
 }
 
-#menu{
+.menu {
     flex: 1;
-    padding-top: 6rem;
-    font-size: 2.5rem;
+    padding-bottom: 6rem;
+    cursor: pointer;
 }
 
-#welcomeHeader, #welcomeHeader > #menu a{
-    color:white;
-    text-shadow: 2px 2px 5px black;
+.menu > span {
+    height: 4px;
+    width: 1.6rem;
+    background: black;
+    display: block;
+    margin-top: 6px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.trigger:checked ~ label .menu span:first-child {
+    transform: rotate(45deg);
+    top: 5px;
+}
+
+.trigger:checked ~ label .menu span:last-child {
+    transform: rotate(-45deg);
+    top: -5px;
 }
 
 nav {
@@ -66,6 +81,14 @@ nav {
     background-color: white;
 }
 
+.trigger:checked ~ nav {
+    width: 40vw;
+}
+
+.trigger {
+    display: none;
+}
+
 ul {
     padding-inline-start: 0px;
     list-style: none;
@@ -79,40 +102,24 @@ a:visited {
     color: inherit;
 }
 
-a.topNav:link, #titleBox > a:link, #menu a:link, #close {
+a.topNav:link, #titleBox > a:link {
     text-decoration: none;
     color: black;
 
 }
 
-a:hover, li.selected a, a, #menu a:hover {
+a:hover, li.selected a, a {
     color: pink;
 }
 
-#close {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    font-size: 2rem;
-}
-
-main > *, h2, h3 {
+main, h2, h3 {
     margin-left: 10%;
 } 
 
-#main {
-    transition: ease-in-out 0.5s;
-}
-
 /* INDEX */
 
-#mainBox {
-    background-color: black;
-    margin: 0;
-}
-
 .coverimg {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-position: center;
     background-size: cover;
@@ -124,7 +131,6 @@ main > *, h2, h3 {
 
 #welcome {
     background-image: url(img/welcome.jpeg);
-
 }
 
 #welcome3 {
@@ -132,13 +138,13 @@ main > *, h2, h3 {
 }
 
 #stripe {
-    width: 100vw;
+    width: 100%;
     height: 70vh;
-    background-color: black;
+    background-color: pink;
     display: flex;
 }
 
-#mainBox div > * {
+#indexMain div > * {
     margin: auto;
     text-transform: uppercase;
     font-size: 3rem;
@@ -146,7 +152,7 @@ main > *, h2, h3 {
     text-align: center;
 }
 
-#welcome > h1 {
+#welcome h1 {
     font-size: 4rem;
     text-align: left;
 }

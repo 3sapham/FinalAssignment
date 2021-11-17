@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
-    <script src='../main.js'></script>
-    <title>Final Assignment</title>
+    <title>Reflection</title>
 </head>
 
 <body>
@@ -15,21 +14,26 @@
     <div id="titleBox">
         <a href="../index.html">Final Assignment</a>
     </div>
-    <span id="menu" onclick="openNav()">
-        <a href="javascript:void(0)">&#9776;</a>
-    </span>          
+    <input type="checkbox" class="trigger" id="menuBtn">
+    <label for="menuBtn">
+        <p>MENU</p>
+        <div class="menu">
+            <span></span>
+            <span></span>
+        </div>
+    </label>
+    <nav>
+        <ul>
+            <li class="selected"><a class="topNav" href="reflection.html">Reflection</a></li>
+            <li><a class="topNav" href="accessibility.html">Accessibility</a></li>
+            <li><a class="topNav" href="topical.html">Topical Information</a></li>
+            <li><a class="topNav" href="fun.html">Fun Page</a></li>
+        </ul>
+    </nav> 
 </header>
-<nav id="sidenav">
-    <a href="javascript:void(0)" id="close" onclick="closeNav()">&times;</a>
-    <ul>
-        <li class="selected"><a class="topNav" href="reflection.html">Reflection</a></li>
-        <li><a class="topNav" href="accessibility.html">Accessibility</a></li>
-        <li><a class="topNav" href="topical.html">Topical Information</a></li>
-        <li><a class="topNav" href="fun.html">Fun Page</a></li>
-    </ul>
-</nav>
 
-<main id="main" onclick="closeNav()">
+
+<main>
     <div id="reflectimg" class="coverPage">
         <h1>Reflection</h1>
     </div>
