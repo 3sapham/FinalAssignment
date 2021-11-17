@@ -128,7 +128,7 @@ main > *, h2, h3 {
 }
 
 #welcome3 {
-    background-image: url(/img/welcome2.jpeg);
+    background-image: url(img/welcome2.jpeg);
 }
 
 #stripe {
@@ -183,19 +183,19 @@ h1, .coverimg h2, #stripe p {
 }
 
 #reflectimg {
-    background-image: url(/img/reflection.jpeg);
+    background-image: url(img/reflection.jpeg);
 }
 
 #accessimg {
-    background-image: url(/img/access.jpeg);
+    background-image: url(img/access.jpeg);
 }
 
 #topicalimg {
-    background-image: url(/img/topical.jpeg);
+    background-image: url(img/topical.jpeg);
 }
 
 #funimg {
-    background-image: url(/img/fun.gif);
+    background-image: url(img/fun.gif);
 }
 
 article div p, .refrences {
