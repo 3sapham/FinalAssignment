@@ -38,20 +38,31 @@ header {
     transform: rotate(180deg);
 }
 
+#titleBox a {
+    margin-top: 6rem;
+}
+
 .menu {
     flex: 1;
-    padding-bottom: 6rem;
-    cursor: pointer;
+    margin-bottom: 6rem;
 }
 
 .menu > span {
     height: 4px;
     width: 1.6rem;
-    background: black;
+    background-color: black;
     display: block;
     margin-top: 6px;
     position: relative;
     transition: transform 0.3s ease-in-out;
+}
+
+label {
+    cursor: pointer;
+}
+
+label:hover .menu > span {
+    background-color: pink;
 }
 
 .trigger:checked ~ label .menu span:first-child {
@@ -112,7 +123,7 @@ a:hover, li.selected a, a {
     color: pink;
 }
 
-main, h2, h3 {
+main, h2, h3, footer {
     margin-left: 10%;
 } 
 
@@ -222,13 +233,17 @@ article div p:last-child {
     margin-bottom: 4rem;
 }
 
-article div {
-    width: 90vw;
-    margin-right: 0;
+figure {
+    margin: 4rem 0;
+}
+
+figcaption {
+    font-weight: 500;
+    padding: 0 2rem;
 }
 
 #ref2 {
-    width: 90vw;
+    width: 100%;
 }
 
 #gallery {
@@ -238,6 +253,7 @@ article div {
     justify-content: space-between;
     flex-wrap: wrap;
     background-color: pink;
+    margin: 4rem 0;
 }
 
 .galleri {
@@ -251,12 +267,8 @@ article div {
     padding-bottom: 10%;
 }
 
-#ref2, #gallery {
-    margin: 4rem 0;
-}
-
 footer {
-    width: 80%;
+    width: 90%;
     display: flex;
     flex-flow: column;
     padding: 4rem;
