@@ -1,0 +1,164 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+* {
+    box-sizing: border-box;
+    margin: auto;
+}
+
+body {
+    margin: 0;
+    font-size: 1.2rem;
+    background-color:black;
+    color:white;
+    font-family: 'Raleway', 'Poppins', 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    line-height: 1.65;
+}
+
+header {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 99;
+    overflow-x: hidden;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+#titleBox {
+    text-align: left;
+    font-size: 1.5rem;
+    flex: 1;
+}
+
+#titleBox a {
+    margin-top: 6rem;
+}
+
+.menu {
+    flex: 1;
+    display: inline-block;
+}
+
+.menu > span {
+    height: 4px;
+    width: 1.6rem;
+    background-color: white;
+    display: block;
+    margin-top: 6px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+label {
+    cursor: pointer;
+    height: 10vh;
+    display: flex;
+}
+
+label:hover .menu > span {
+    background-color: pink;
+}
+
+.trigger:checked ~ label .menu span:first-child {
+    transform: rotate(45deg);
+    top: 5px;
+}
+
+.trigger:checked ~ label .menu span:last-child {
+    transform: rotate(-45deg);
+    top: -5px;
+}
+
+nav {
+    height: 90vh;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    font-size: 1.5rem;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+    text-align: center;
+    line-height: 0.9;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+}
+
+.trigger:checked ~ nav {
+    width: 100vw;
+}
+
+.trigger {
+    opacity: 0;
+}
+
+ul {
+    padding-inline-start: 0px;
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 3rem;
+}
+
+a:visited {
+    color: inherit;
+}
+
+a.topNav:link, #titleBox > a:link {
+    text-decoration: none;
+
+}
+
+a:hover, li.selected a, a {
+    color: pink;
+} 
+
+#coverImg {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: black;
+    display: flex;
+    background-image: url(../img/funcover.jpeg);
+}
+
+footer {
+    display: flex;
+    flex-flow: row;
+    padding: 4rem;
+}
+
+footer > span {
+    flex: 1;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+@media screen and (min-width: 600px) { 
+    nav {
+        font-size: 2rem;
+    }
+
+    #titleBox {
+        writing-mode:horizontal-tb; 
+        transform: rotate(0);
+    }
+}
+
+@media screen and (min-width: 960px) {
+    
+}

@@ -15,6 +15,7 @@ body {
     font-weight: 700;
     font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
     line-height: 1.5;
+    word-wrap: break-word;
 }
 
 header {
@@ -93,11 +94,11 @@ nav {
 }
 
 .trigger:checked ~ nav {
-    width: 40vw;
+    width: 80vw;
 }
 
 .trigger {
-    display: none;
+    opacity: 0;
 }
 
 ul {
@@ -196,6 +197,7 @@ h1, .coverimg h2, #stripe p {
     margin: 0;
     text-align: left;
     padding: 4rem;
+    overflow: scroll;
 }
 
 #reflectimg {
@@ -239,7 +241,7 @@ figure {
 
 figcaption {
     font-weight: 500;
-    padding: 0 2rem;
+    padding-left: 10%;
 }
 
 #ref2 {
@@ -259,18 +261,12 @@ figcaption {
 .galleri {
     flex: 1;
     padding-left: 10%;
-    padding-top: 10%;
     width: 100%;
 }
 
-.galleri:last-child {
-    padding-bottom: 10%;
-}
-
 footer {
-    width: 90%;
     display: flex;
-    flex-flow: column;
+    flex-flow: row;
     padding: 4rem;
 }
 
@@ -282,12 +278,8 @@ footer > span {
 }
 
 @media screen and (min-width: 600px) { 
-    nav {
-        font-size: 2rem;
-    }
-
-    footer {
-        flex-flow: row;
+    .trigger:checked ~ nav {
+        width: 50vw;
     }
 
     footer > span {
@@ -311,23 +303,30 @@ footer > span {
         flex-direction: row;
     }
     
-    .galleri {
-        width: 40%;
+    #gallery figure {
+        width: 50%;
     }
 
     .galleri {
-        padding-left: 5%;
-        padding-top: 5%;
+        padding-left: 10%;
     }
 
-    .galleri:last-child, .galleri:nth-last-child(2) {
-        padding-bottom: 5%;
+    #gallery figure:last-child, #gallery figure:nth-last-child(2) {
+        margin-top: 0;
     }
 }
 
 @media screen and (min-width: 960px) {
-   #titleBox {
+    nav {
         font-size: 2rem;
+    }
+
+    #titleBox {
+        font-size: 2rem;
+    }
+
+    .trigger:checked ~ nav {
+        width: 40vw;
     }
 
     article div p, .refrences {
