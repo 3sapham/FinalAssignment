@@ -250,6 +250,7 @@ a:hover, li.selected a, a {
     border-bottom: none;
 }
 
+
 footer {
     display: flex;
     flex-flow: row;
