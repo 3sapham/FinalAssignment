@@ -12,7 +12,7 @@ body {
     font-size: 1.2rem;
     background-color:black;
     color:white;
-    font-family: 'Raleway', 'Poppins', 'Noto Sans KR', sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 400;
     line-height: 1.65;
 }
@@ -122,30 +122,145 @@ a:hover, li.selected a, a {
     color: pink;
 } 
 
-#coverImg {
+#coverBox {
     width: 100vw;
     height: 100vh;
     display: flex;
+    background-color: black;
+    background-image: url(../img/funimg/funcover.jpeg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-color: black;
+}
+
+#intro {
     display: flex;
-    background-image: url(../img/funcover.jpeg);
+    height: 70vh;
+}
+
+#intro h2 {
+    width: 50%;
+}
+
+#about {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color:firebrick;
+}
+
+#about > * {
+    padding: 4rem;
+}
+
+#about figure {
+    flex: 1;
+}
+
+#about figure img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+#about div {
+    flex: 1;
+    width: 500px;
+}
+
+#albums {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    padding: 4rem 0;
+}
+
+#albums figure {
+    width: 45%;
+    flex: 1;
+    padding: 4rem;
+}
+
+#albums figure img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+#upcoming {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#upcomingTtl {
+    width: 100%;
+    background-color: firebrick;
+    display: flex;
+    padding: 2rem;
+    text-transform: uppercase;
+}
+
+#upcomingMain {
+    width: 100vw;
+}
+
+#upcomingMain figure {
+    width: 100%;
+    height: 45vh;
+}
+
+#upcomingMain figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#upcomingTxt {
+    width: 100%;
+    height: 40vh;
+    padding: 4rem;
+    background-color:orangered;
+}
+
+#dates {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    padding: 6rem 4rem;
+}
+
+#dateTtl {
+    vertical-align: text-top;
+}
+
+#place h3 {
+    padding-top: 2rem;
+}
+
+#place ul {
+    border-bottom: 1px solid darkgray;
+    padding-bottom: 2rem;
+}
+
+#place ul:last-child {
+    border-bottom: none;
 }
 
 footer {
     display: flex;
     flex-flow: row;
-    padding: 4rem;
+    padding: 6rem;
 }
 
 footer > span {
     flex: 1;
     font-size: 1rem;
     text-align: center;
-    margin: 0.5rem 0;
+    margin-bottom: 2rem;
 }
 
 @media screen and (min-width: 600px) { 
@@ -153,12 +268,52 @@ footer > span {
         font-size: 2rem;
     }
 
-    #titleBox {
-        writing-mode:horizontal-tb; 
-        transform: rotate(0);
+    #about {
+        flex-direction: row;
+    }
+
+    #albums figure img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    #upcoming {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #upcomingTtl {
+        height: 100%;
+        width: 20vw;
+        writing-mode: vertical-rl; 
+        transform: rotate(180deg);
+    }
+
+    #upcomingMain {
+        width: 80vw;
+    }
+
+    #upcomingMain figure {
+        width: 100%;
+        height: 70vh;
+    }
+
+    #upcomingTxt {
+        width: 100%;
+        height: 30vh;
+    }
+
+    #dates {
+        flex-direction: row;
     }
 }
 
 @media screen and (min-width: 960px) {
-    
+    #albums figure img {
+        width: 500px;
+        height: 500px;
+    }
 }
