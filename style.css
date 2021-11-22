@@ -196,6 +196,7 @@ h1, .coverimg h2, #stripe p {
     margin: 0;
     text-align: left;
     padding: 4rem;
+    overflow-x: scroll;
 }
 
 #reflectimg {
