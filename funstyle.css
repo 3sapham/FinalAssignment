@@ -133,7 +133,7 @@ a:hover, li.selected a, a {
     width: 100vw;
     height: 100vh;
     display: flex;
-    background-image: url(../img/funimg/funcover.jpeg);
+    background-image: url(img/funimg/funcover.jpeg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
