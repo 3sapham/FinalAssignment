@@ -55,7 +55,6 @@ label > span {
 label {
     cursor: pointer;
     margin-bottom: 6rem;
-
 }
 
 label:hover > span {
@@ -118,7 +117,6 @@ a:visited {
 a.topNav:link, #titleBox > a:link {
     text-decoration: none;
     color: black;
-
 }
 
 a:hover, li.selected a, a {

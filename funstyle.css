@@ -249,9 +249,8 @@ figure:hover figcaption {
     width: 100vw;
     display: flex;
     flex-direction: column;
-    padding: 6rem 4rem;
+    padding: 6rem;
 }
-
 
 #place h3 {
     padding-top: 2rem;
@@ -353,6 +352,10 @@ footer > span {
 }
 
 @media screen and (min-width: 960px) {
+    #about {
+        padding: 4rem;
+    }
+
     #albums figure img {
         width: 500px;
         height: 500px;
