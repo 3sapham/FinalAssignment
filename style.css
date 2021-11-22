@@ -46,6 +46,7 @@ label > span {
 
 label {
     cursor: pointer;
+    z-index: 2;
 }
 
 label:hover > span {
@@ -63,7 +64,7 @@ label:hover > span {
 }
 
 nav {
-    height: 90vh;
+    height: 100vh;
     bottom: 0;
     width: 0;
     font-size: 1.5rem;
@@ -146,13 +147,13 @@ a:hover, li.selected a, a {
 #indexMain div > * {
     margin: auto;
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 1.5rem;
     width: 65%;
     text-align: center;
 }
 
 #welcome h1 {
-    font-size: 4rem;
+    font-size: 2.4rem;
     text-align: left;
 }
 
@@ -170,7 +171,7 @@ h1, .coverimg h2, #stripe p {
 /* PAGES */
 
 .coverPage {
-    height: 100vh;
+    height: 70vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -183,7 +184,7 @@ h1, .coverimg h2, #stripe p {
     font-size: 2rem;
     margin: 0;
     text-align: left;
-    padding: 4rem;
+    padding: 2rem;
     overflow-x: hidden;
 }
 
@@ -306,7 +307,11 @@ footer > span {
     }
 
     #welcome > h1 {
-        font-size: 5rem;
+        font-size: 4rem;
+    }
+
+    .coverPage {
+        height: 100vh;
     }
 
     .coverPage > h1 {
