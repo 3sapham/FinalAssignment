@@ -12,9 +12,10 @@ body {
     font-size: 1.2rem;
     background-color:black;
     color:white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Moderat','Avenir','Helvetica','Arial',sans-serif;
     font-weight: 400;
     line-height: 1.65;
+    word-wrap: break-word;
 }
 
 header {
@@ -27,7 +28,8 @@ header {
     overflow-x: hidden;
     text-transform: uppercase;
     text-align: center;
-    padding: 0 2rem;
+    padding: 2rem;
+    text-shadow: 2px 2px 4px black;
 }
 
 #titleBox {
@@ -40,12 +42,12 @@ header {
     margin-top: 6rem;
 }
 
-.menu {
-    flex: 1;
-    display: inline-block;
+label {
+    cursor: pointer;
+    align-self: flex-end;
 }
 
-.menu > span {
+label > span {
     height: 4px;
     width: 1.6rem;
     background-color: white;
@@ -55,22 +57,16 @@ header {
     transition: transform 0.3s ease-in-out;
 }
 
-label {
-    cursor: pointer;
-    height: 10vh;
-    display: flex;
+label:hover > span {
+    background-color:aquamarine;
 }
 
-label:hover .menu > span {
-    background-color: pink;
-}
-
-.trigger:checked ~ label .menu span:first-child {
+.trigger:checked ~ label span:first-child {
     transform: rotate(45deg);
     top: 5px;
 }
 
-.trigger:checked ~ label .menu span:last-child {
+.trigger:checked ~ label span:last-child {
     transform: rotate(-45deg);
     top: -5px;
 }
@@ -89,7 +85,6 @@ nav {
     text-transform: uppercase;
     display: flex;
     justify-content: space-between;
-    background-color: black;
 }
 
 .trigger:checked ~ nav {
@@ -97,12 +92,22 @@ nav {
 }
 
 .trigger {
-    opacity: 0;
+    left: -50000px;
+    position: absolute;
+}
+
+.trigger:focus ~ label {
+    outline: blue medium auto;
 }
 
 ul {
     padding-inline-start: 0px;
     list-style: none;
+}
+
+nav ul {
+    background-color: black;
+    padding: 8rem;
 }
 
 nav li {
@@ -119,35 +124,41 @@ a.topNav:link, #titleBox > a:link {
 }
 
 a:hover, li.selected a, a {
-    color: pink;
+    color:cadetblue;
 } 
 
-#coverBox {
+#coverBox, .intro {
     width: 100vw;
     height: 100vh;
     display: flex;
-    background-color: black;
     background-image: url(../img/funimg/funcover.jpeg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    text-align: center;
+    text-transform: uppercase;
 }
 
-#intro {
-    display: flex;
-    height: 70vh;
+#coverBox {
+    font-size: 4rem;
 }
 
-#intro h2 {
-    width: 50%;
+.intro {
+    height: 150vh;
+}
+
+.intro h2, .intro h3 {
+    width: 70%;
+    text-shadow: 2px 2px 4px black;
 }
 
 #about {
     width: 100vw;
     display: flex;
     flex-direction: column;
-    background-color:firebrick;
+    background-color:white;
+    color: black;
 }
 
 #about > * {
@@ -166,7 +177,7 @@ a:hover, li.selected a, a {
 
 #about div {
     flex: 1;
-    width: 500px;
+    width: 100%;
 }
 
 #albums {
@@ -174,7 +185,7 @@ a:hover, li.selected a, a {
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
-    padding: 4rem 0;
+    padding: 8rem 0;
 }
 
 #albums figure {
@@ -189,6 +200,14 @@ a:hover, li.selected a, a {
     object-fit: cover;
 }
 
+figcaption {
+    color: black;
+}
+
+figure:hover figcaption {
+    color: white;
+}
+
 #upcoming {
     width: 100vw;
     height: 90vh;
@@ -198,7 +217,6 @@ a:hover, li.selected a, a {
 
 #upcomingTtl {
     width: 100%;
-    background-color: firebrick;
     display: flex;
     padding: 2rem;
     text-transform: uppercase;
@@ -223,7 +241,8 @@ a:hover, li.selected a, a {
     width: 100%;
     height: 40vh;
     padding: 4rem;
-    background-color:orangered;
+    background-color:white;
+    color: black;
 }
 
 #dates {
@@ -233,23 +252,35 @@ a:hover, li.selected a, a {
     padding: 6rem 4rem;
 }
 
-#dateTtl {
-    vertical-align: text-top;
-}
 
 #place h3 {
     padding-top: 2rem;
 }
 
 #place ul {
-    border-bottom: 1px solid darkgray;
     padding-bottom: 2rem;
+}
+
+#place ul li:first-child {
+    padding-top: 1rem;
 }
 
 #place ul:last-child {
     border-bottom: none;
 }
 
+#closing {
+    width: 100vw;
+    background-color: white;
+}
+
+#closing figure img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    padding: 4rem;
+
+}
 
 footer {
     display: flex;
@@ -267,6 +298,15 @@ footer > span {
 @media screen and (min-width: 600px) { 
     nav {
         font-size: 2rem;
+    }
+
+    #coverBox {
+        font-size: 4rem;
+    }
+
+    .intro h2, .intro h3 {
+        width: 50%;
+        text-shadow: 2px 2px black;
     }
 
     #about {

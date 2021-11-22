@@ -1,3 +1,3 @@
 # FinalAssignment
  
-Alle bildene er hentet fra oslomet sine nettsider
+Bildene er hentet fra oslomet sine nettsider og unplashed

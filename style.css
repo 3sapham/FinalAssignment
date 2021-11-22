@@ -34,7 +34,6 @@ header {
 #titleBox {
     text-align: center;
     font-size: 1.5rem;
-    flex: 3;
     writing-mode: vertical-rl; 
     transform: rotate(180deg);
 }
@@ -43,12 +42,7 @@ header {
     margin-top: 6rem;
 }
 
-.menu {
-    flex: 1;
-    margin-bottom: 6rem;
-}
-
-.menu > span {
+label > span {
     height: 4px;
     width: 1.6rem;
     background-color: black;
@@ -60,18 +54,20 @@ header {
 
 label {
     cursor: pointer;
+    margin-bottom: 6rem;
+
 }
 
-label:hover .menu > span {
+label:hover > span {
     background-color: pink;
 }
 
-.trigger:checked ~ label .menu span:first-child {
+.trigger:checked ~ label span:first-child {
     transform: rotate(45deg);
     top: 5px;
 }
 
-.trigger:checked ~ label .menu span:last-child {
+.trigger:checked ~ label span:last-child {
     transform: rotate(-45deg);
     top: -5px;
 }
@@ -98,7 +94,12 @@ nav {
 }
 
 .trigger {
-    opacity: 0;
+    left: -50000px;
+    position: absolute;
+}
+
+.trigger:focus ~ label {
+    outline: blue medium auto;
 }
 
 ul {
@@ -197,7 +198,6 @@ h1, .coverimg h2, #stripe p {
     margin: 0;
     text-align: left;
     padding: 4rem;
-    overflow: scroll;
 }
 
 #reflectimg {
