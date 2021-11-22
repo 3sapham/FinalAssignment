@@ -9,7 +9,6 @@ html {
 
 body {
     margin: 0;
-    font-size: 1.2rem;
     background-color:white;
     color:black;
     font-weight: 700;
@@ -19,27 +18,20 @@ body {
 }
 
 header {
-    width: 10vw;
-    height: 100vh;
+    width: 100vw;
+    height: 10vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     position: fixed;
     z-index: 99;
     overflow-x: hidden;
     text-transform: uppercase;
-    text-align: center;
+    background-color: white;
 }
 
 #titleBox {
-    text-align: center;
     font-size: 1.5rem;
-    writing-mode: vertical-rl; 
-    transform: rotate(180deg);
-}
-
-#titleBox a {
-    margin-top: 6rem;
 }
 
 label > span {
@@ -54,7 +46,6 @@ label > span {
 
 label {
     cursor: pointer;
-    margin-bottom: 6rem;
 }
 
 label:hover > span {
@@ -72,24 +63,23 @@ label:hover > span {
 }
 
 nav {
-    height: 100vh;
+    height: 90vh;
+    bottom: 0;
     width: 0;
     font-size: 1.5rem;
     position: fixed;
     z-index: 1;
     overflow-x: hidden;
     text-align: center;
-    transition: ease-in-out 0.5s;
     line-height: 0.9;
     text-transform: uppercase;
     display: flex;
     justify-content: space-between;
-    margin-left: 10%;
     background-color: white;
 }
 
 .trigger:checked ~ nav {
-    width: 80vw;
+    width: 100vw;
 }
 
 .trigger {
@@ -123,9 +113,7 @@ a:hover, li.selected a, a {
     color: pink;
 }
 
-main, h2, h3, footer {
-    margin-left: 10%;
-} 
+ 
 
 /* INDEX */
 
@@ -192,11 +180,11 @@ h1, .coverimg h2, #stripe p {
 } 
 
 .coverPage > h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 0;
     text-align: left;
     padding: 4rem;
-    overflow-x: scroll;
+    overflow-x: hidden;
 }
 
 #reflectimg {
@@ -234,7 +222,7 @@ article div p:last-child {
     margin-bottom: 4rem;
 }
 
-figure {
+figure, #gallery {
     margin: 4rem 0;
 }
 
@@ -254,7 +242,14 @@ figcaption {
     justify-content: space-between;
     flex-wrap: wrap;
     background-color: pink;
-    margin: 4rem 0;
+}
+
+#gallery figure {
+    margin-bottom: 0;
+}
+
+#gallery figure:last-child {
+    margin-bottom: 4rem;
 }
 
 .galleri {
@@ -265,7 +260,7 @@ figcaption {
 
 footer {
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
     padding: 4rem;
 }
 
@@ -277,12 +272,33 @@ footer > span {
 }
 
 @media screen and (min-width: 600px) { 
+    header {
+        width: 10vw;
+        height: 100vh;
+        flex-direction: column;
+    }
+    
+    #titleBox {
+        writing-mode: vertical-rl; 
+        transform: rotate(180deg);
+    }
+    
+    #titleBox a {
+        margin-top: 6rem;
+    }
+    
+    nav {
+        height: 100vh;
+        margin-left: 10%;
+        transition: ease-in-out 0.5s;
+    }
+    
     .trigger:checked ~ nav {
         width: 50vw;
     }
 
-    footer > span {
-        margin: 4rem 0;
+    main, h2, h3, footer {
+        margin-left: 10%;
     }
 
     article div p, .refrences {
@@ -309,13 +325,21 @@ footer > span {
     .galleri {
         padding-left: 10%;
     }
+    
+    footer {
+        flex-flow: row;
+    }
 
-    #gallery figure:last-child, #gallery figure:nth-last-child(2) {
-        margin-top: 0;
+    footer > span {
+        margin: 4rem 0;
     }
 }
 
 @media screen and (min-width: 960px) {
+    body {
+        font-size: 1.2rem;
+    }
+
     nav {
         font-size: 2rem;
     }

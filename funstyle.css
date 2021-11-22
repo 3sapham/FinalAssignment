@@ -9,7 +9,6 @@ html {
 
 body {
     margin: 0;
-    font-size: 1.2rem;
     background-color:black;
     color:white;
     font-family: 'Moderat','Avenir','Helvetica','Arial',sans-serif;
@@ -27,9 +26,8 @@ header {
     z-index: 99;
     overflow-x: hidden;
     text-transform: uppercase;
-    text-align: center;
-    padding: 2rem;
     text-shadow: 2px 2px 4px black;
+    padding: 2rem;
     font-weight: bolder;
 
 }
@@ -40,13 +38,8 @@ header {
     flex: 1;
 }
 
-#titleBox a {
-    margin-top: 6rem;
-}
-
 label {
     cursor: pointer;
-    align-self: flex-end;
 }
 
 label > span {
@@ -57,6 +50,7 @@ label > span {
     margin-top: 6px;
     position: relative;
     transition: transform 0.3s ease-in-out;
+    box-shadow: 2px 2px 4px black;
 }
 
 label:hover > span {
@@ -77,7 +71,6 @@ nav {
     height: 90vh;
     width: 0;
     bottom: 0;
-    left: 0;
     font-size: 1.5rem;
     position: fixed;
     z-index: 1;
@@ -109,7 +102,7 @@ ul {
 
 nav ul {
     background-color: black;
-    padding: 8rem;
+    padding: 4rem;
 }
 
 nav li {
@@ -140,14 +133,16 @@ a:hover, li.selected a, a {
     background-attachment: fixed;
     text-align: center;
     text-transform: uppercase;
+    overflow-x: hidden;
 }
 
 #coverBox {
-    font-size: 4rem;
+    font-size: 2.5rem;
 }
 
 .intro {
     height: 150vh;
+    font-size: 1rem;
 }
 
 .intro h2, .intro h3 {
@@ -164,7 +159,7 @@ a:hover, li.selected a, a {
 }
 
 #about > * {
-    padding: 4rem;
+    padding: 2rem;
 }
 
 #about figure {
@@ -173,7 +168,7 @@ a:hover, li.selected a, a {
 
 #about figure img {
     width: 100%;
-    height: 600px;
+    height: 400px;
     object-fit: cover;
 }
 
@@ -191,9 +186,8 @@ a:hover, li.selected a, a {
 }
 
 #albums figure {
-    width: 45%;
     flex: 1;
-    padding: 4rem;
+    padding: 2rem;
 }
 
 #albums figure img {
@@ -212,7 +206,6 @@ figure:hover figcaption {
 
 #upcoming {
     width: 100vw;
-    height: 90vh;
     display: flex;
     flex-direction: column;
 }
@@ -241,7 +234,6 @@ figure:hover figcaption {
 
 #upcomingTxt {
     width: 100%;
-    height: 40vh;
     padding: 4rem;
     background-color:white;
     color: black;
@@ -251,11 +243,12 @@ figure:hover figcaption {
     width: 100vw;
     display: flex;
     flex-direction: column;
-    padding: 6rem;
+    padding: 3rem;
 }
 
 #dateTtl {
     text-transform: uppercase;
+    padding: 4rem 0;
 }
 
 #place h3 {
@@ -289,7 +282,7 @@ figure:hover figcaption {
 
 footer {
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
     padding: 6rem;
 }
 
@@ -305,6 +298,10 @@ footer > span {
         font-size: 2rem;
     }
 
+    nav ul {
+        padding: 6rem;
+    }
+
     #coverBox {
         font-size: 4rem;
     }
@@ -316,6 +313,18 @@ footer > span {
 
     #about {
         flex-direction: row;
+    }
+
+    #about > * {
+        padding: 4rem;
+    }
+
+    #about figure img {
+        height: 500px;
+    }
+
+    #albums figure {
+        padding: 4rem;
     }
 
     #albums figure img {
@@ -355,11 +364,23 @@ footer > span {
     #dates {
         flex-direction: row;
     }
+
+    footer {
+        flex-flow: row;
+    }
 }
 
 @media screen and (min-width: 960px) {
+    .intro {
+        font-size: 1.4rem;
+    }
+
     #about {
         padding: 4rem;
+    }
+
+    #about figure img {
+        height: 600px;
     }
 
     #albums figure img {
