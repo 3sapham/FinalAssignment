@@ -19,6 +19,7 @@ body {
 
 header {
     width: 100vw;
+    height: 10vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -27,7 +28,6 @@ header {
     overflow-x: hidden;
     text-transform: uppercase;
     text-shadow: 2px 2px 4px black;
-    padding: 0.8rem;
     font-weight: bolder;
 
 }
@@ -35,7 +35,6 @@ header {
 #titleBox {
     text-align: left;
     font-size: 1.5rem;
-    flex: 1;
 }
 
 label {
@@ -56,7 +55,7 @@ label > span {
 }
 
 label:hover > span {
-    background-color:orangered;
+    background-color:crimson;
 }
 
 .trigger:checked ~ label span:first-child {
@@ -118,7 +117,7 @@ a.topNav:link, #titleBox > a:link {
 }
 
 a:hover, li.selected a, a {
-    color:orangered;
+    color:crimson;
 } 
 
 #coverBox, .intro {
@@ -147,6 +146,7 @@ a:hover, li.selected a, a {
 .intro h2, .intro h3 {
     width: 70%;
     text-shadow: 2px 2px 4px black;
+    margin: auto;
 }
 
 #about {
@@ -281,10 +281,38 @@ footer > span {
 
 @media screen and (min-width: 600px) { 
     header {
-        padding: 2rem;
+        width: 10vw;
+        height: 100vh;
+        flex-direction: column;
     }
-    nav {
+    
+    #titleBox {
+        writing-mode: vertical-rl; 
+        transform: rotate(180deg);
         font-size: 2rem;
+    }
+    
+    #titleBox a {
+        margin-top: 6rem;
+    }
+    
+    nav {
+        height: 100vh;
+        margin-left: 10%;
+        transition: ease-in-out 0.5s;
+        font-size: 2rem;
+    }
+    
+    .trigger:checked ~ nav {
+        width: 50vw;
+    }
+
+    main, h2, h3, footer {
+        margin-left: 10%;
+    }
+
+    header {
+        padding: 2rem;
     }
 
     #coverBox {
