@@ -133,6 +133,7 @@ a:hover, li.selected a, a {
     text-align: center;
     text-transform: uppercase;
     overflow-x: hidden;
+    background-color: black;
 }
 
 #coverBox {

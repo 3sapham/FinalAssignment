@@ -178,6 +178,7 @@ h1, .coverimg h2, #stripe p {
     align-items: flex-end;
     display: flex;
     margin-bottom: 4rem;
+    background-color: black;
 } 
 
 .coverPage > h1 {
