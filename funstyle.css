@@ -122,7 +122,6 @@ a:hover, li.selected a, a {
 } 
 
 #coverBox, .intro {
-    width: 100%;
     height: 100vh;
     display: flex;
     background-image: url(img/funimg/funcover.jpeg);
@@ -151,7 +150,6 @@ a:hover, li.selected a, a {
 }
 
 #about {
-    width: 100%;
     display: flex;
     flex-direction: column;
     background-color:white;
@@ -174,11 +172,9 @@ a:hover, li.selected a, a {
 
 #about div {
     flex: 1;
-    width: 100%;
 }
 
 #albums {
-    width: 100%;
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
@@ -205,24 +201,17 @@ figure:hover figcaption {
 }
 
 #upcoming {
-    width: 100%;
     display: flex;
     flex-direction: column;
 }
 
 #upcomingTtl {
-    width: 100%;
     display: flex;
     padding: 2rem;
     text-transform: uppercase;
 }
 
-#upcomingMain {
-    width: 100%;
-}
-
 #upcomingMain figure {
-    width: 100%;
     height: 45vh;
 }
 
@@ -233,14 +222,12 @@ figure:hover figcaption {
 }
 
 #upcomingTxt {
-    width: 100%;
     padding: 4rem;
     background-color:white;
     color: black;
 }
 
 #dates {
-    width: 100%;
     display: flex;
     flex-direction: column;
     padding: 3rem;
@@ -268,7 +255,6 @@ figure:hover figcaption {
 }
 
 #closing {
-    width: 100%;
     background-color: white;
 }
 
@@ -355,7 +341,6 @@ footer > span {
     }
 
     #upcomingTxt {
-        width: 100%;
         height: 30vh;
     }
 
