@@ -26,8 +26,9 @@ header {
     z-index: 99;
     overflow-x: hidden;
     text-transform: uppercase;
-    background-color:pink;
+    background-color:white;
     padding: 1rem 2rem;
+
 }
 
 #titleBox {
@@ -43,7 +44,6 @@ label > span {
     display: block;
     margin-top: 6px;
     position: relative;
-    transition: transform 0.3s ease-in-out;
 }
 
 label {
@@ -52,7 +52,8 @@ label {
 }
 
 label:hover > span {
-    background-color: pink;
+    background-color:royalblue;
+    box-shadow: 2px 1px black;
 }
 
 .trigger:checked ~ label span:first-child {
@@ -113,8 +114,9 @@ a.topNav:link, #titleBox > a:link {
     color: black;
 }
 
-a:hover, li.selected a, a {
-    color: pink;
+a:hover, li.selected a {
+    color:royalblue;
+    text-shadow: 2px 1px black;
 }
 
  
@@ -130,12 +132,19 @@ a:hover, li.selected a, a {
     background-attachment: fixed;
     background-color: black;
     display: flex;
+    flex-direction: column;
     margin-bottom: 4rem;
     
 }
 
 #welcome {
     background-image: url(img/welcome.jpeg);
+}
+
+#welcome a {
+    margin: 2rem;
+    text-align: center;
+    color: white;
 }
 
 #stripe {
@@ -253,7 +262,8 @@ figcaption {
 footer {
     display: flex;
     flex-flow: column;
-    padding: 4rem;
+    margin-top: 6rem;
+    padding-bottom: 4rem;
     border-top: 1px solid lightgray;
 }
 
@@ -261,12 +271,13 @@ footer > span {
     flex: 1;
     font-size: 1rem;
     text-align: center;
-    margin: 0.5rem 0;
+    padding: 2rem;
 }
 
 @media screen and (min-width: 600px) { 
-    
-
+    .trigger:checked ~ nav {
+        width: 60vw;
+    }
     article div p, .refrences {
         max-width: 60ch;
     }
@@ -305,21 +316,40 @@ footer > span {
     }
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1060px) {
     body {
         font-size: 1.2rem;
     }
 
+    label, .trigger {
+        display: none;
+    }
+
     nav {
-        font-size: 2rem;
+        height: auto;
+        width: auto;
+        font-size: 1.2rem;
+        text-align: right;
+        display: inline-block;
+        flex: 1;
+        overflow:hidden;
+        background-color:transparent;
+    }
+
+    nav ul {
+        padding: 2rem;
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin: 0 0.5rem;
     }
 
     #titleBox {
+        display: inline-block;
         font-size: 2rem;
-    }
-
-    .trigger:checked ~ nav {
-        width: 40vw;
+        flex: 1;
+        width: 40%;
     }
 
     article div p, .refrences {
