@@ -27,9 +27,9 @@ header {
     z-index: 99;
     overflow-x: hidden;
     text-transform: uppercase;
-    text-shadow: 2px 2px 4px black;
     font-weight: bolder;
-
+    text-shadow: 2px 2px 2px black;
+    border-bottom: 0.1px solid darkgray;
 }
 
 #titleBox {
@@ -51,11 +51,12 @@ label > span {
     margin-top: 6px;
     position: relative;
     transition: transform 0.3s ease-in-out;
-    box-shadow: 2px 2px 4px black;
+    box-shadow: 2px 2px 2px black;
 }
 
 label:hover > span {
-    background-color:crimson;
+    background-color: aquamarine;
+    box-shadow: 3px 2px white;
 }
 
 .trigger:checked ~ label span:first-child {
@@ -116,8 +117,9 @@ a.topNav:link, #titleBox > a:link {
 
 }
 
-a:hover, li.selected a, a {
-    color:crimson;
+a:hover, li.selected a {
+    color: aquamarine;
+    text-shadow: 3px 2px white;
 } 
 
 #coverBox, .intro {
@@ -149,11 +151,13 @@ a:hover, li.selected a, a {
     margin: auto;
 }
 
+article {
+    border-bottom: 0.1px solid darkgray;
+}
+
 #about {
     display: flex;
     flex-direction: column;
-    background-color:white;
-    color: black;
 }
 
 #about > * {
@@ -178,7 +182,7 @@ a:hover, li.selected a, a {
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
-    padding: 8rem 0;
+    padding: 8rem 2rem;
 }
 
 #albums figure {
@@ -223,8 +227,6 @@ figure:hover figcaption {
 
 #upcomingTxt {
     padding: 4rem;
-    background-color:white;
-    color: black;
 }
 
 #dates {
@@ -280,40 +282,7 @@ footer > span {
 }
 
 @media screen and (min-width: 600px) { 
-    header {
-        width: 10vw;
-        height: 100vh;
-        flex-direction: column;
-    }
     
-    #titleBox {
-        writing-mode: vertical-rl; 
-        transform: rotate(180deg);
-        font-size: 2rem;
-    }
-    
-    #titleBox a {
-        margin-top: 6rem;
-    }
-    
-    nav {
-        height: 100vh;
-        margin-left: 10%;
-        transition: ease-in-out 0.5s;
-        font-size: 2rem;
-    }
-    
-    .trigger:checked ~ nav {
-        width: 50vw;
-    }
-
-    main, h2, h3, footer {
-        margin-left: 10%;
-    }
-
-    header {
-        padding: 2rem;
-    }
 
     #coverBox {
         font-size: 4rem;
@@ -336,8 +305,12 @@ footer > span {
         height: 500px;
     }
 
+    #albums {
+        padding: 8rem 4rem;
+    }
+
     #albums figure {
-        padding: 4rem;
+        padding: 2rem;
     }
 
     #albums figure img {
@@ -386,6 +359,39 @@ footer > span {
 }
 
 @media screen and (min-width: 960px) {
+    header {
+        width: 10vw;
+        height: 100vh;
+        flex-direction: column;
+        border-right: 0.1px solid darkgray;
+        border-bottom: 0;
+    }
+    
+    #titleBox {
+        writing-mode: vertical-rl; 
+        transform: rotate(180deg);
+        font-size: 2rem;
+    }
+    
+    #titleBox a {
+        margin-top: 6rem;
+    }
+    
+    nav {
+        height: 100vh;
+        transition: ease-in-out 0.5s;
+        font-size: 2rem;
+        margin-left: 9%;
+    }
+
+    .trigger:checked ~ nav {
+        width: 40vw;
+    }
+
+    main, footer {
+        margin-left: 10%;
+    }
+
     #coverBox {
         font-size: 6rem;
     }
