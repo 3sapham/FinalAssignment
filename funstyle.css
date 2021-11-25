@@ -274,7 +274,7 @@ footer {
     padding: 6rem;
 }
 
-footer > span {
+footer > div {
     flex: 1;
     font-size: 1rem;
     text-align: center;
