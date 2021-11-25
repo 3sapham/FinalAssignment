@@ -12,7 +12,7 @@ body {
     background-color:white;
     color:black;
     font-weight: 700;
-    font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.5;
     word-wrap: break-word;
 }
@@ -141,8 +141,10 @@ a:hover, li.selected a {
     background-image: url(img/welcome.jpeg);
 }
 
-#welcome a {
-    margin: 2rem;
+.scroll {
+    position: absolute;
+    align-self: center;
+    bottom: 2rem;
     text-align: center;
     color: white;
 }
@@ -158,9 +160,7 @@ a:hover, li.selected a {
     width: 65%;
 }
 
-
-
-h1, .coverimg h2 {
+h1 {
     line-height: 0.9;
     text-transform: uppercase;
     color: white;
@@ -171,37 +171,30 @@ h1, .coverimg h2 {
 
 .coverPage {
     height: 70vh;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     align-items: flex-end;
     display: flex;
-    margin-bottom: 4rem;
-    background-color: black;
-} 
+}
+
+.coverPage > img {
+    width: 100%;
+    height: 100%;    
+    object-fit: cover;
+}
 
 .coverPage > h1 {
     font-size: 2rem;
-    margin: 0;
     text-align: left;
     padding: 2rem;
     overflow-x: hidden;
+    position: absolute;
 }
 
-#reflectimg {
-    background-image: url(img/reflection.jpeg);
+#reflectimg > img {
+    position: left;
 }
 
-#accessimg {
-    background-image: url(img/access.jpeg);
-}
-
-#topicalimg {
-    background-image: url(img/topical.jpeg);
-}
-
-#funimg {
-    background-image: url(img/fun.gif);
+article {
+    padding-top: 10vh;
 }
 
 article div p, .refrences {
@@ -287,7 +280,7 @@ footer > span {
     }
 
     .coverPage {
-        height: 100vh;
+        height: 90vh;
     }
 
     .coverPage > h1 {
@@ -358,6 +351,20 @@ footer > span {
     
     #welcome > h1 {
         font-size: 6rem;
+    }
+
+    article > div > p {
+        display: inline-block;
+        width: 50%;
+        left: 30%;
+    }
+
+    article > div > h2, h3 {
+        display: inline-block;
+        vertical-align:top;
+        text-align: right;
+        padding-right: 2rem;
+        width: 30%;
     }
     
     .coverPage > h1 {
