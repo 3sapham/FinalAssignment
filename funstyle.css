@@ -32,7 +32,7 @@ header {
     border-bottom: 0.1px solid darkgray;
 }
 
-#titleBox {
+.titleBox {
     text-align: left;
     font-size: 1.5rem;
 }
@@ -112,7 +112,7 @@ a:visited {
     color: inherit;
 }
 
-a.topNav:link, #titleBox > a:link {
+a.topNav:link, .titleBox > a:link {
     text-decoration: none;
 
 }
@@ -122,7 +122,7 @@ a:hover, li.selected a {
     text-shadow: 3px 2px white;
 } 
 
-#coverBox, .intro {
+.heroimg, .intro {
     height: 100vh;
     display: flex;
     background-image: url(img/funimg/funcover.jpeg);
@@ -136,7 +136,7 @@ a:hover, li.selected a {
     background-color: black;
 }
 
-#coverBox {
+.heroimg h1 {
     font-size: 2.5rem;
 }
 
@@ -145,7 +145,7 @@ a:hover, li.selected a {
     font-size: 1rem;
 }
 
-.intro h2, .intro h3 {
+.intro > h2, h3 {
     width: 70%;
     text-shadow: 2px 2px 4px black;
     margin: auto;
@@ -178,19 +178,25 @@ article {
     flex: 1;
 }
 
-#albums {
+#albums h2 {
+    padding: 4rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#albumcvrs {
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
-    padding: 8rem 2rem;
+    padding: 0 2rem 6rem 2rem;
 }
 
-#albums figure {
+#albumcvrs figure {
     flex: 1;
     padding: 2rem;
 }
 
-#albums figure img {
+#albumcvrs figure img {
     width: 250px;
     height: 250px;
     object-fit: cover;
@@ -282,13 +288,11 @@ footer > div {
 }
 
 @media screen and (min-width: 600px) { 
-    
-
-    #coverBox {
+    .heroimg h1 {
         font-size: 4rem;
     }
 
-    .intro h2, .intro h3 {
+    .intro > h2, h3 {
         width: 50%;
         text-shadow: 2px 2px black;
     }
@@ -305,15 +309,15 @@ footer > div {
         height: 500px;
     }
 
-    #albums {
-        padding: 8rem 4rem;
+    #albumcvrs {
+        padding: 0 2rem 6rem 2rem;
     }
 
-    #albums figure {
+    #albumcvrs figure {
         padding: 2rem;
     }
 
-    #albums figure img {
+    #albumcvrs figure img {
         width: 300px;
         height: 300px;
         object-fit: cover;
@@ -367,13 +371,13 @@ footer > div {
         border-bottom: 0;
     }
     
-    #titleBox {
+    .titleBox {
         writing-mode: vertical-rl; 
         transform: rotate(180deg);
         font-size: 2rem;
     }
     
-    #titleBox a {
+    .titleBox a {
         margin-top: 6rem;
     }
     
@@ -392,7 +396,7 @@ footer > div {
         margin-left: 10%;
     }
 
-    #coverBox {
+    .heroimg {
         font-size: 6rem;
     }
 
@@ -411,7 +415,7 @@ footer > div {
         height: 600px;
     }
 
-    #albums figure img {
+    #albumcvrs figure img {
         width: 500px;
         height: 500px;
     }
