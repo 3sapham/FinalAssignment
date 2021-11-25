@@ -32,95 +32,97 @@ header {
     border-bottom: 0.1px solid darkgray;
 }
 
-.titleBox {
-    text-align: left;
-    font-size: 1.5rem;
-}
+    .titleBox {
+        text-align: left;
+        font-size: 1.5rem;
+    }
 
-label {
-    cursor: pointer;
-    z-index: 2;
+/* Hamburger Menu */
+    .trigger {
+        left: -50000px;
+        position: absolute;
+    }
 
-}
+        .trigger:focus ~ label {
+            outline: blue medium auto;
+        }
 
-label > span {
-    height: 4px;
-    width: 1.6rem;
-    background-color: white;
-    display: block;
-    margin-top: 6px;
-    position: relative;
-    transition: transform 0.3s ease-in-out;
-    box-shadow: 2px 2px 2px black;
-}
+    label {
+        cursor: pointer;
+        z-index: 2;
 
-label:hover > span {
-    background-color: aquamarine;
-    box-shadow: 3px 2px white;
-}
+    }
 
-.trigger:checked ~ label span:first-child {
-    transform: rotate(45deg);
-    top: 5px;
-}
+        label > span {
+            height: 4px;
+            width: 1.6rem;
+            background-color: white;
+            display: block;
+            margin-top: 6px;
+            position: relative;
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 2px 2px 2px black;
+        }
 
-.trigger:checked ~ label span:last-child {
-    transform: rotate(-45deg);
-    top: -5px;
-}
+        label:hover > span {
+            background-color: aquamarine;
+            box-shadow: 3px 2px white;
+        }
 
-nav {
-    height: 100vh;
-    width: 0;
-    left: 0;
-    top: 0;
-    font-size: 1.5rem;
-    position: fixed;
-    z-index: 1;
-    overflow-x: hidden;
-    text-align: center;
-    line-height: 0.9;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: space-between;
-    background-color: black;
-}
+            .trigger:checked ~ label span:first-child {
+                transform: rotate(45deg);
+                top: 5px;
+            }
 
-.trigger:checked ~ nav {
-    width: 100vw;
-}
+            .trigger:checked ~ label span:last-child {
+                transform: rotate(-45deg);
+                top: -5px;
+            }
 
-.trigger {
-    left: -50000px;
-    position: absolute;
-}
+    nav {
+        height: 100vh;
+        width: 0;
+        left: 0;
+        top: 0;
+        font-size: 1.5rem;
+        position: fixed;
+        z-index: 1;
+        overflow-x: hidden;
+        text-align: center;
+        line-height: 0.9;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: space-between;
+        background-color: black;
+    }
 
-.trigger:focus ~ label {
-    outline: blue medium auto;
-}
+        .trigger:checked ~ nav {
+            width: 100vw;
+        }
 
-ul {
-    padding-inline-start: 0px;
-    list-style: none;
-}
+        ul {
+            padding-inline-start: 0px;
+            list-style: none;
+        }
 
-nav li {
-    margin-bottom: 3rem;
-}
+        nav li {
+            margin-bottom: 3rem;
+        }
+/* */
 
 a:visited {
     color: inherit;
 }
 
-a.topNav:link, .titleBox > a:link {
-    text-decoration: none;
+    a.topNav:link, .titleBox > a:link {
+        text-decoration: none;
 
-}
+    }
 
-a:hover, li.selected a {
-    color: aquamarine;
-    text-shadow: 3px 2px white;
-} 
+    a:hover, li.selected a {
+        color: aquamarine;
+        text-shadow: 3px 2px white;
+    } 
 
 .heroimg, .intro {
     height: 100vh;
@@ -136,20 +138,20 @@ a:hover, li.selected a {
     background-color: black;
 }
 
-.heroimg h1 {
-    font-size: 2.5rem;
-}
+    .heroimg {
+        font-size: 2.5rem;
+    }
 
-.intro {
-    height: 150vh;
-    font-size: 1rem;
-}
+    .intro {
+        height: 150vh;
+        font-size: 1rem;
+    }
 
-.intro > h2, h3 {
-    width: 70%;
-    text-shadow: 2px 2px 4px black;
-    margin: auto;
-}
+        .intro h2, .intro h3 {
+            width: 70%;
+            text-shadow: 2px 2px 4px black;
+            margin: auto;
+        }
 
 article {
     border-bottom: 0.1px solid darkgray;
@@ -160,23 +162,23 @@ article {
     flex-direction: column;
 }
 
-#about > * {
-    padding: 2rem;
-}
+    #about > * {
+        padding: 2rem;
+    }
 
-#about figure {
-    flex: 1;
-}
+    #about figure {
+        flex: 1;
+    }
 
-#about figure img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-}
+        #about figure img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
 
-#about div {
-    flex: 1;
-}
+    #about div {
+        flex: 1;
+    }
 
 #albums h2 {
     padding: 4rem;
@@ -191,49 +193,49 @@ article {
     padding: 0 2rem 6rem 2rem;
 }
 
-#albumcvrs figure {
-    flex: 1;
-    padding: 2rem;
-}
+    #albumcvrs figure {
+        flex: 1;
+        padding: 2rem;
+    }
 
-#albumcvrs figure img {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-}
+        #albumcvrs figure img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+        }
 
 figcaption {
     color: black;
 }
 
-figure:hover figcaption {
-    color: white;
-}
+    figure:hover figcaption {
+        color: white;
+    }
 
 #upcoming {
     display: flex;
     flex-direction: column;
 }
 
-#upcomingTtl {
-    display: flex;
-    padding: 2rem;
-    text-transform: uppercase;
-}
+    #upcomingTtl {
+        display: flex;
+        padding: 2rem;
+        text-transform: uppercase;
+    }
 
-#upcomingMain figure {
-    height: 45vh;
-}
+    #upcomingMain figure {
+        height: 45vh;
+    }
 
-#upcomingMain figure img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+        #upcomingMain figure img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-#upcomingTxt {
-    padding: 4rem;
-}
+    #upcomingTxt {
+        padding: 4rem;
+    }
 
 #dates {
     display: flex;
@@ -241,10 +243,10 @@ figure:hover figcaption {
     padding: 3rem;
 }
 
-#dateTtl {
-    text-transform: uppercase;
-    padding: 4rem 0;
-}
+    #dateTtl {
+        text-transform: uppercase;
+        padding: 4rem 0;
+    }
 
 #place h3 {
     padding-top: 2rem;
@@ -254,9 +256,9 @@ figure:hover figcaption {
     padding-bottom: 2rem;
 }
 
-#place ul li:first-child {
-    padding-top: 1rem;
-}
+    #place ul li:first-child {
+        padding-top: 1rem;
+    }
 
 #place ul:last-child {
     border-bottom: none;
@@ -266,13 +268,13 @@ figure:hover figcaption {
     background-color: white;
 }
 
-#closing figure img {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    padding: 2rem;
+    #closing figure img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        padding: 2rem;
 
-}
+    }
 
 footer {
     display: flex;
@@ -288,11 +290,11 @@ footer > div {
 }
 
 @media screen and (min-width: 600px) { 
-    .heroimg h1 {
+    .heroimg {
         font-size: 4rem;
     }
 
-    .intro > h2, h3 {
+    .intro h2, .intro h3 {
         width: 50%;
         text-shadow: 2px 2px black;
     }
@@ -301,27 +303,27 @@ footer > div {
         flex-direction: row;
     }
 
-    #about > * {
-        padding: 4rem;
-    }
+        #about > * {
+            padding: 4rem;
+        }
 
-    #about figure img {
-        height: 500px;
-    }
+        #about figure img {
+            height: 500px;
+        }
 
     #albumcvrs {
         padding: 0 2rem 6rem 2rem;
     }
 
-    #albumcvrs figure {
-        padding: 2rem;
-    }
+        #albumcvrs figure {
+            padding: 2rem;
+        }
 
-    #albumcvrs figure img {
-        width: 300px;
-        height: 300px;
-        object-fit: cover;
-    }
+            #albumcvrs figure img {
+                width: 300px;
+                height: 300px;
+                object-fit: cover;
+            }
 
     #upcoming {
         height: 100vh;
@@ -329,25 +331,25 @@ footer > div {
         flex-direction: row;
     }
 
-    #upcomingTtl {
-        height: 100%;
-        width: 20vw;
-        writing-mode: vertical-rl; 
-        transform: rotate(180deg);
-    }
+        #upcomingTtl {
+            height: 100%;
+            width: 20vw;
+            writing-mode: vertical-rl; 
+            transform: rotate(180deg);
+        }
 
-    #upcomingMain {
-        width: 80vw;
-    }
+        #upcomingMain {
+            width: 80vw;
+        }
 
-    #upcomingMain figure {
-        width: 100%;
-        height: 70vh;
-    }
+            #upcomingMain figure {
+                width: 100%;
+                height: 70vh;
+            }
 
-    #upcomingTxt {
-        height: 30vh;
-    }
+        #upcomingTxt {
+            height: 30vh;
+        }
 
     #dates {
         flex-direction: row;
@@ -363,6 +365,10 @@ footer > div {
 }
 
 @media screen and (min-width: 960px) {
+    body {
+        font-size: 1.2rem;
+    }
+    
     header {
         width: 10vw;
         height: 100vh;
@@ -377,9 +383,9 @@ footer > div {
         font-size: 2rem;
     }
     
-    .titleBox a {
-        margin-top: 6rem;
-    }
+        .titleBox a {
+            margin-top: 6rem;
+        }
     
     nav {
         height: 100vh;
@@ -388,21 +394,19 @@ footer > div {
         margin-left: 9%;
     }
 
-    .trigger:checked ~ nav {
-        width: 40vw;
-    }
+        .trigger:checked ~ nav {
+            width: 40vw;
+        }
 
     main, footer {
         margin-left: 10%;
     }
 
+/* Page */
     .heroimg {
         font-size: 6rem;
     }
 
-    body {
-        font-size: 1.2rem;
-    }
     .intro {
         font-size: 1.4rem;
     }
@@ -411,9 +415,9 @@ footer > div {
         padding: 4rem;
     }
 
-    #about figure img {
-        height: 600px;
-    }
+        #about figure img {
+            height: 600px;
+        }
 
     #albumcvrs figure img {
         width: 500px;

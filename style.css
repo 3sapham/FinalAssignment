@@ -37,6 +37,16 @@ header {
 
     }
 
+/* Hamburger Menu */
+    .trigger {
+        left: -50000px;
+        position: absolute;
+    }
+
+        .trigger:focus ~ label {
+            outline: blue medium auto;
+        }
+
     label {
         cursor: pointer;
         z-index: 2;
@@ -65,15 +75,6 @@ header {
                 transform: rotate(-45deg);
                 top: -5px;
             }
-
-    .trigger {
-        left: -50000px;
-        position: absolute;
-    }
-
-        .trigger:focus ~ label {
-            outline: blue medium auto;
-        }
 
     nav {
         height: 100vh;
@@ -104,6 +105,7 @@ header {
         nav li {
             margin-bottom: 3rem;
         }
+/* */
 
 a.topNav:link, .titleBox > a:link {
     text-decoration: none;
@@ -333,6 +335,7 @@ figure, #gallery {
         margin-left: 6rem;
     }
 
+/* No Hamburger Menu */
     label, .trigger {
         display: none;
     }
@@ -363,7 +366,8 @@ figure, #gallery {
         flex: 1;
         width: 40%;
     }
-    
+/* */
+
     .heroimg > h1 {
         font-size: 6rem;
     }
