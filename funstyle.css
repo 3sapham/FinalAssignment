@@ -264,11 +264,11 @@ figcaption {
         border-bottom: none;
     }
 
-#closing {
+#bottomimg {
     background-color: white;
 }
 
-    #closing figure img {
+    #bottomimg figure img {
         width: 100%;
         height: 100vh;
         object-fit: cover;
@@ -355,7 +355,7 @@ footer {
         flex-direction: row;
     }
 
-    #closing figure img {
+    #bottomimg figure img {
         padding: 4rem;
     }
 
