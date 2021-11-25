@@ -188,7 +188,7 @@ footer {
         color: yellow;
     }
 
-#end figure img {
+#bottomimg figure img {
     height: 100vh;
     object-fit: cover;
     padding: 2rem;
@@ -196,18 +196,18 @@ footer {
 
 /* PAGES */
 
-.coverPage {
+.coverimg {
     height: 70vh;
     align-items: flex-end;
     display: flex;
 }
 
-    .coverPage > img {
+    .coverimg > img {
         height: 100%;    
         object-fit: cover;
     }
 
-    .coverPage > h1 {
+    .coverimg > h1 {
         font-size: 2rem;
         text-align: left;
         padding: 2rem;
@@ -296,15 +296,15 @@ figure, #gallery {
         font-size: 4rem;
     }
 
-    #end img {
+    #bottomimg img {
         padding: 4rem;
     }
 
-    .coverPage {
+    .coverimg {
         height: 90vh;
     }
 
-        .coverPage > h1 {
+        .coverimg > h1 {
             font-size: 4rem;
             padding: 4rem;
         }
@@ -373,7 +373,7 @@ figure, #gallery {
         font-size: 6rem;
     }
 
-    #end figure img, #refimg {
+    #bottomimg figure img, #refimg {
         padding: 0 6rem;
     }
 
@@ -394,7 +394,7 @@ figure, #gallery {
             width: 30%;
         }
     
-    .coverPage > h1 {
+    .coverimg > h1 {
         font-size: 6rem;
         padding: 6rem;
     }
