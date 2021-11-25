@@ -26,7 +26,7 @@ header {
     z-index: 99;
     overflow-x: hidden;
     text-transform: uppercase;
-    background-color:white;
+    background-color:gold;
     padding: 1rem 2rem;
 
 }
@@ -62,7 +62,7 @@ header {
         }
 
         label:hover > span {
-            background-color:royalblue;
+            background-color:white;
             box-shadow: 2px 1px black;
         }
 
@@ -117,7 +117,7 @@ a.topNav:link, .titleBox > a:link {
     }
 
     a:hover, li.selected a {
-        color:royalblue;
+        color:white;
         text-shadow: 2px 1px black;
     }
 
@@ -142,7 +142,7 @@ footer {
     flex-flow: column;
     margin-top: 4rem;
     padding-bottom: 4rem;
-    border-top: 1px solid lightgray;
+    border-top: 1px solid black;
 }
 
     footer > div {
@@ -255,8 +255,8 @@ figure, #gallery {
     flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
-    background-color: royalblue;
-    color: white;
+    background-color: gold;
+    color: black;
 }
 
     #gallery figure {
@@ -323,7 +323,7 @@ figure, #gallery {
 
         .galleri {
             padding-left: 10%;
-            height: 50vh;
+            height: 40vh;
         }
 }
 
@@ -397,5 +397,9 @@ figure, #gallery {
     .coverPage > h1 {
         font-size: 6rem;
         padding: 6rem;
+    }
+
+    .galleri {
+        height: 50vh;
     }
 }
