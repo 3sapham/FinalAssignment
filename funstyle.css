@@ -115,7 +115,6 @@ a {
 
     a.topNav:link, .titleBox > a:link {
         text-decoration: none;
-
     }
 
     a:hover, li.selected a {

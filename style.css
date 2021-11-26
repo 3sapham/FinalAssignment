@@ -28,13 +28,11 @@ header {
     text-transform: uppercase;
     background-color:gold;
     padding: 1rem 2rem;
-
 }
 
     .titleBox {
         font-size: 1.5rem;
         flex: 1;
-
     }
 
 /* Hamburger Menu */
@@ -185,14 +183,11 @@ footer {
     font-weight: 500;
     text-decoration: none;
     text-shadow: 2px 1px black;
+    color: yellow;
 }
 
-    .scroll:visited {
-        color: yellow;
-    }
-
 #bottomimg figure img {
-    height: 90vh;
+    height: 80vh;
     object-fit: cover;
 }
 
