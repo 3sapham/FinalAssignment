@@ -1,3 +1,3 @@
 # FinalAssignment
 
-All the pictures are taken from oslomet's website and unSplashed.
+All the pictures on our website are taken from Oslomet's website and Unsplash.
