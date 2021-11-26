@@ -107,18 +107,21 @@ header {
         }
 /* */
 
-a.topNav:link, .titleBox > a:link {
-    text-decoration: none;
+a {
     color: black;
 }
 
-    a:visited {
-        color: inherit;
+    a.topNav:link, .titleBox > a:link {
+        text-decoration: none;
     }
 
     a:hover, li.selected a {
         color:white;
         text-shadow: 2px 1px black;
+    }
+
+    article div p a:hover, .refrences a:hover {
+        color: lightskyblue;
     }
 
 img {
@@ -189,9 +192,8 @@ footer {
     }
 
 #bottomimg figure img {
-    height: 100vh;
+    height: 90vh;
     object-fit: cover;
-    padding: 2rem;
 }
 
 /* PAGES */
@@ -236,8 +238,8 @@ article div p, .refrences {
         margin-bottom: 4rem;
     }
 
-#refimg {
-    margin: auto 2rem;
+#refimg, #gallery {
+    margin: 2rem auto;
 }
 
 figure {
@@ -261,7 +263,6 @@ figure {
     background-color: gold;
     color: black;
     padding: 2rem 1rem;
-
 }
 
     #gallery figure {
@@ -294,10 +295,6 @@ figure {
 
     .heroimg > h1 {
         font-size: 4rem;
-    }
-
-    #bottomimg img {
-        padding: 4rem;
     }
 
     .coverimg {
@@ -372,8 +369,8 @@ figure {
         font-size: 6rem;
     }
 
-    #bottomimg figure img, #refimg {
-        padding: 0 6rem;
+    #bottomimg figure, #refimg {
+        padding: 0 4rem;
     }
 
     article div p, .refrences {

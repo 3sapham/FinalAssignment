@@ -109,8 +109,8 @@ header {
         }
 /* */
 
-a:visited {
-    color: inherit;
+a {
+    color: white;
 }
 
     a.topNav:link, .titleBox > a:link {
