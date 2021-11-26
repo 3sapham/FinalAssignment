@@ -65,8 +65,7 @@ header {
         }
 
         label:hover > span {
-            background-color: aquamarine;
-            box-shadow: 3px 2px white;
+            box-shadow: 3px 2px blue;
         }
 
             .trigger:checked ~ label span:first-child {
@@ -120,8 +119,7 @@ a:visited {
     }
 
     a:hover, li.selected a {
-        color: aquamarine;
-        text-shadow: 3px 2px white;
+        text-shadow: 3px 2px blue;
     } 
 
 .heroimg, .intro {
@@ -153,13 +151,11 @@ a:visited {
             margin: auto;
         }
 
-article {
-    border-bottom: 0.1px solid darkgray;
-}
-
 #about {
     display: flex;
     flex-direction: column;
+    background-color: white;
+    color: black;
 }
 
     #about > * {
@@ -215,6 +211,8 @@ figcaption {
 #upcoming {
     display: flex;
     flex-direction: column;
+    background-color: white;
+    color: black;
 }
 
     #upcomingTtl {
@@ -369,11 +367,11 @@ footer {
         font-size: 1.2rem;
     }
     
+/* Side header/nav */
     header {
         width: 10vw;
         height: 100vh;
         flex-direction: column;
-        border-right: 0.1px solid darkgray;
         border-bottom: 0;
     }
     
@@ -401,8 +399,8 @@ footer {
     main, footer {
         margin-left: 10%;
     }
+/* */
 
-/* Page */
     .heroimg {
         font-size: 6rem;
     }
